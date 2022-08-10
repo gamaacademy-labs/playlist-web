@@ -1,5 +1,3 @@
-/* eslint-disable linebreak-style */
-
 export default function Home() {
 	return (
 		<div className='bg-slate-600 container mx-auto md:mx-0'>
