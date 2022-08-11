@@ -1,7 +1,19 @@
+import GridIcon from '../components/atoms/grid-icon'
+import HamburgerIcon from '../components/atoms/hamburger-icon'
+import HeaderContainer from '../components/atoms/header-container'
+import HeaderIconContainer from '../components/atoms/header-icon-container'
+import Logo from '../components/atoms/logo'
+import ZoomIcon from '../components/atoms/zoom-icon'
+
 export default function Home() {
 	return (
-		<div className='bg-slate-600 container mx-auto md:mx-0'>
-			<h1 className='text-2xl text-red-900'>Hello World</h1>
-		</div>
+		<HeaderContainer>
+			<Logo />
+			<HeaderIconContainer>
+				<ZoomIcon/>
+				<GridIcon/>
+				<HamburgerIcon />
+			</HeaderIconContainer>
+		</HeaderContainer>
 	)
 }
