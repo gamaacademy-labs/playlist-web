@@ -1,7 +1,9 @@
-import Navbar from '../components/molecules/navbar'
+import Layout from '../components/templates/motion'
 
 export default function Home() {
 	return (
-		<Navbar />
+		<Layout>
+			<h1>Hello World</h1>
+		</Layout>
 	)
 }
