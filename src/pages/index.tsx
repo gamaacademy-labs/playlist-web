@@ -33,6 +33,5 @@ export default function Home() {
 		 	<Link href="#"><a><ImgThubnail></ImgThubnail></a></Link>
 			 </ContainerBackgroundThumbnail>
 		</div>
-		
 	)
 }
