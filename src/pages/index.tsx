@@ -30,8 +30,8 @@ export default function Home() {
 			<InitPlusArrow/>
 			</HeaderThumbnailContainer>
 		 <ContainerBackgroundThumbnail>
-		 	<ImgThubnail></ImgThubnail>
-			</ContainerBackgroundThumbnail>
+		 	<Link href="#"><a><ImgThubnail></ImgThubnail></a></Link>
+			 </ContainerBackgroundThumbnail>
 		</div>
 		
 	)
