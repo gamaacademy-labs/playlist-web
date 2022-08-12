@@ -1,20 +1,12 @@
-import Link from 'next/link'
-import InitPlusArrow from '../components/atoms/init-plus-arrow'
-import HeaderThumbnailContainer from '../components/atoms/header-thumbnail-container'
-import ContainerBackgroundThumbnail from '../components/atoms/container-background-thumbnail'
-import ImgThubnail from '../components/atoms/thumbnail'
-
+import PlaylistHeader from '../components/molecules/playlist-header'
+import Thumbnail from '../components/molecules/thumbnail'
+import Layout from '../components/templates/motion'
 
 export default function Home() {
 	return (
-		<div>
-			<HeaderThumbnailContainer>
-				<Link href="#" ><a className='text-[#7d38db]'>Início{' '}</a></Link>
-				<InitPlusArrow/>
-			</HeaderThumbnailContainer>
-			<ContainerBackgroundThumbnail>
-				<ImgThubnail />
-			</ContainerBackgroundThumbnail>
-		</div>
+		<Layout>
+			<PlaylistHeader />
+			<Thumbnail />
+		</Layout>
 	)
 }
