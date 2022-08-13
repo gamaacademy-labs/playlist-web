@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Navbar from '../molecules/navbar'
 import React from 'react'
+import BackgroundButtonPlaylist from '../atoms/backgroud-button-playlist'
 
 interface Props {
   children: React.ReactNode
@@ -15,6 +16,7 @@ const Main: React.FC<Props> = ({children}) => {
 			</Head>
 			<Navbar/>
 			{children}
+			<BackgroundButtonPlaylist/>
 		</>
 	)
 }
