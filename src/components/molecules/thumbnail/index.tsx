@@ -1,5 +1,5 @@
 import React from 'react'
-import ContainerBackgroundThumbnail from '../../atoms/container-background-thumbnail'
+import ContainerBackgroundThumbnail from '../../atoms/container-thumbnail'
 import ImgThubnail from '../../atoms/thumbnail'
 
 const Thumbnail: React.FC = () => {
