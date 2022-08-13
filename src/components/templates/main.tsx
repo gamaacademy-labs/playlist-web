@@ -16,7 +16,7 @@ const Main: React.FC<Props> = ({children}) => {
 			</Head>
 			<Navbar/>
 			{children}
-			<BackgroundButtonPlaylist/>
+			
 		</>
 	)
 }
