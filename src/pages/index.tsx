@@ -1,6 +1,6 @@
-import BackgroundButtonPlaylist from '../components/atoms/backgroud-button-playlist'
+import PlaybuttonContainer from '../components/atoms/playbutton-container'
+import PlayLargeIcon from '../components/atoms/playbutton-icon-lg'
 import TabContainer from '../components/atoms/tabs-container'
-import TitleContainer from '../components/atoms/title-container'
 import PlaylistHeader from '../components/molecules/playlist-header'
 import PlaylistTitle from '../components/molecules/playlist-title'
 import Thumbnail from '../components/molecules/thumbnail'
@@ -12,11 +12,11 @@ export default function Home() {
 		<Layout>
 			<PlaylistHeader />
 			<Thumbnail />
+			<PlaylistTitle />
       <TabContainer>
         <Tabs />
       </TabContainer>
-			<PlaylistTitle />
-			<BackgroundButtonPlaylist/>
+      <PlaybuttonContainer />
 		</Layout>
 	)
 }

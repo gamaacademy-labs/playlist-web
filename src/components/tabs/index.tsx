@@ -49,8 +49,8 @@ const Tabs: React.FC = () => {
             <Layout>
               <div key={key} className='p-4'>
                 {tab.title == tabsTypes.DESCRIPTION.title ?
-                  <TabDetail /> :
-                  <TabGrade />
+                  <TabDetail key={key}/> :
+                  <TabGrade key={key}/>
                 }
               </div>
             </Layout>
