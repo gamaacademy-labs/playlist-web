@@ -1,4 +1,4 @@
-# 📱 Gama Lab Playlist Service Web App
+# 📱 Gama Lab Playlist Service Web App.
 
 ## Getting Started
 
