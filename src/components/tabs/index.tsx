@@ -1,12 +1,22 @@
 import { useState } from 'react'
+import TabDetail from '../atoms/tab-detail'
+import TabGrade from '../atoms/tab-grade'
 import Layout from '../templates/motion'
 
-interface Props {
-  children: JSX.Element[],
-}
 
-const Tabs: React.FC<Props> = ({children}) => {
-  const [activeTab, setActiveTab] = useState(children[0].props.label)
+const Tabs: React.FC = () => {
+  const tabsTypes = {
+     DESCRIPTION: {
+      title: 'Detalhes',
+      content: 'Detalhes'
+    },
+    CONTENTGRADE: {
+      title: 'Grade de conteudo',
+      content: 'Grade de conteudo'
+    }
+  }
+
+  const [activeTab, setActiveTab] = useState(tabsTypes.DESCRIPTION.title)
   const handleClick = (e, newActiveTab) => {
     e.preventDefault()
     setActiveTab(newActiveTab)
@@ -19,23 +29,29 @@ const Tabs: React.FC<Props> = ({children}) => {
                      border
                      border-[#CCD1CF]
                      rounded-full
-                     gap-6
+                     gap-4
                      py-1
                      px-1
-                     items-center'
+                     items-center
+                     mx-4
+                     text-xs'
       >
-        {children.map((tab) => (
-          <li className={tab.props.label == activeTab ? 'currentTab' : 'mx-2'} key={tab.props.label}>
-            <a href="#" onClick={(e) => handleClick(e, tab.props.label)}>{tab.props.label}</a>
+          <li className={tabsTypes.DESCRIPTION.title == activeTab ? 'currentTab' : 'mx-2'}>
+            <a href="#" onClick={(e) => handleClick(e, 'Detalhes')}>Detalhes</a>
           </li>
-        ))}
+          <li className={tabsTypes.CONTENTGRADE.title == activeTab ? 'currentTab' : 'mx-2'}>
+            <a href="#" onClick={(e) => handleClick(e, 'Grade de conteudo')}>Grade de conteudo</a>
+          </li>
       </ul>
-        {children.map((details) => {
-          if(details.props.label == activeTab)
+        {Object.entries(tabsTypes).map(([key, tab]) => {
+          if(tab.title == activeTab)
           return (
             <Layout>
-              <div key={details.props.label} className='p-4'>
-                {details.props.children}
+              <div key={key} className='p-4'>
+                {tab.title == tabsTypes.DESCRIPTION.title ?
+                  <TabDetail /> :
+                  <TabGrade />
+                }
               </div>
             </Layout>
           )

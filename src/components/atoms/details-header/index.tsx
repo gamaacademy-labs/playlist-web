@@ -3,7 +3,7 @@ import TimerIcon from "../timer-icon";
 
 const DetailsHeader: React.FC = () => {
   return (
-    <div className='py-4 my-6 border-y flex gap-8'>
+    <div className='py-4 my-6 border-y flex gap-8 mx-2'>
       <div className='flex items-center gap-2'>
         <TimerIcon />
         <div>

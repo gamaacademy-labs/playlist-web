@@ -4,7 +4,7 @@ interface Props {
 
 const TabContainer: React.FC<Props> = ({children}) => {
   return (
-    <div className='p-6'>
+    <div className='p-2'>
       {children}
     </div>
   )
