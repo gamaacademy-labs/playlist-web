@@ -1,3 +1,4 @@
+import ExternalLinkIcon from '../external-link-icon'
 import PlayIcon from '../play-icon'
 
 const TabGrade: React.FC = () => {
@@ -74,8 +75,8 @@ const TabGrade: React.FC = () => {
         </li>
         <li className="border-b px-5 py-4 flex items-center justify-between">
           <div className="flex items-center gap-5">
-            <PlayIcon />
-            <h2>1. Desgin centrado no usuário</h2>
+            <ExternalLinkIcon />
+            <h2>6. Duplo Diamante</h2>
           </div>
           <p>5:22</p>
         </li>
