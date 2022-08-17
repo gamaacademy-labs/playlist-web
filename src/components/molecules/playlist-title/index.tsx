@@ -10,7 +10,7 @@ const PlaylistTitle: React.FC = () => {
         <HipsterIcon />
         <Typography type="title"> UX Writing e Microcopy</Typography>
       </div>
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-1 md:hidden">
         <Rating readOnly value={4} size="small" />
         <Typography>(461)</Typography>
       </div>

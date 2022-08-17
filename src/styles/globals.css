@@ -18,5 +18,9 @@
     py-2
     rounded-full
     text-white
+    transition
+    ease-in-out
+    delay-150
+    duration-300
   }
 }

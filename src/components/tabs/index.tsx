@@ -3,17 +3,16 @@ import TabDetail from '../atoms/tab-detail'
 import TabGrade from '../atoms/tab-grade'
 import Layout from '../templates/motion'
 
-
 const Tabs: React.FC = () => {
   const tabsTypes = {
-     DESCRIPTION: {
+    DESCRIPTION: {
       title: 'Detalhes',
-      content: 'Detalhes'
+      content: 'Detalhes',
     },
     CONTENTGRADE: {
       title: 'Grade de conteudo',
-      content: 'Grade de conteudo'
-    }
+      content: 'Grade de conteudo',
+    },
   }
 
   const [activeTab, setActiveTab] = useState(tabsTypes.DESCRIPTION.title)
@@ -24,7 +23,8 @@ const Tabs: React.FC = () => {
 
   return (
     <div>
-      <ul className='flex
+      <ul
+        className="flex
                    bg-white
                      border
                      border-[#CCD1CF]
@@ -34,28 +34,44 @@ const Tabs: React.FC = () => {
                      px-1
                      items-center
                      mx-4
-                     text-xs'
+                     text-xs"
       >
-          <li className={tabsTypes.DESCRIPTION.title == activeTab ? 'currentTab' : 'mx-2'}>
-            <a href="#" onClick={(e) => handleClick(e, 'Detalhes')}>Detalhes</a>
-          </li>
-          <li className={tabsTypes.CONTENTGRADE.title == activeTab ? 'currentTab' : 'mx-2'}>
-            <a href="#" onClick={(e) => handleClick(e, 'Grade de conteudo')}>Grade de conteudo</a>
-          </li>
+        <li
+          className={
+            tabsTypes.DESCRIPTION.title === activeTab ? 'currentTab' : 'mx-2'
+          }
+        >
+          <button type="button" onClick={e => handleClick(e, 'Detalhes')}>
+            Detalhes
+          </button>
+        </li>
+        <li
+          className={
+            tabsTypes.CONTENTGRADE.title === activeTab ? 'currentTab' : 'mx-2'
+          }
+        >
+          <button
+            type="button"
+            onClick={e => handleClick(e, 'Grade de conteudo')}
+          >
+            Grade de conteudo
+          </button>
+        </li>
       </ul>
-        {Object.entries(tabsTypes).map(([key, tab]) => {
-          if(tab.title == activeTab)
+      {Object.entries(tabsTypes).map(([key, tab]) => {
+        if (tab.title === activeTab)
           return (
             <Layout>
-              <div key={key} className='p-4'>
-                {tab.title == tabsTypes.DESCRIPTION.title ?
-                  <TabDetail key={key}/> :
-                  <TabGrade key={key}/>
-                }
+              <div key={key} className="p-4">
+                {tab.title === tabsTypes.DESCRIPTION.title ? (
+                  <TabDetail key={key} />
+                ) : (
+                  <TabGrade key={key} />
+                )}
               </div>
             </Layout>
           )
-        })}
+      })}
     </div>
   )
 }
