@@ -1,3 +1,4 @@
+import { GetServerSideProps } from 'next'
 import DetailsHeader from '../components/atoms/details-header'
 import PlaybuttonContainer from '../components/atoms/playbutton-container'
 import ProgressBarButton from '../components/atoms/progress-bar-button'
@@ -10,7 +11,7 @@ import Thumbnail from '../components/molecules/thumbnail'
 import Tabs from '../components/tabs'
 import Layout from '../components/templates/motion'
 
-export default function Home() {
+export default function Home({ playlist }) {
   return (
     <Layout>
       <PlaylistHeader />
@@ -31,7 +32,30 @@ export default function Home() {
           <Tabs />
         </TabContainer>
       </div>
-      <ProgressBarButton />
+      <ProgressBarButton contents={playlist.contents} />
     </Layout>
   )
+}
+
+export async function getServerSideProps() {
+  return {
+    props: {
+      playlist: {
+        contents: [
+          {
+            id: 1,
+            isVideoFinalized: true,
+          },
+          {
+            id: 2,
+            isVideoFinalized: false,
+          },
+          {
+            id: 3,
+            isVideoFinalized: false,
+          },
+        ],
+      },
+    },
+  }
 }
