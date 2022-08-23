@@ -1,12 +1,20 @@
 /* eslint-disable react/require-default-props */
+import { useState } from 'react'
+import CheckIcon from '../check-icon'
 import ExternalLinkIcon from '../external-link-icon'
 import PlayIcon from '../play-icon'
 
-type TabGrade = {
-  deverDeCase?: any
+interface TabProps {
+  isVideoFinished: boolean,
+  duration: number,
+
 }
 
-const TabGrade = ({ deverDeCase }: TabGrade) => {
+const TabGrade = () => {
+
+  const [isVideoFinished, setIsVideoFinished] = useState(() => false)
+
+
   return (
     <div className="md:pb-24">
       <div className="my-4 md:px-6">
@@ -20,7 +28,13 @@ const TabGrade = ({ deverDeCase }: TabGrade) => {
             <PlayIcon color="#7D38DB" size="16px" />
             <h2>1. Desgin centrado no usuário</h2>
           </div>
-          <p>5:22</p>
+            <div className='ml-96 flex items-center ' >
+            <div className='mr-4'>
+            <CheckIcon />
+            </div>
+            <p>5:22</p>
+            </div>
+
         </li>
         <li className="border-b px-5 py-4 flex items-center justify-between">
           <div className="flex items-center gap-5">
