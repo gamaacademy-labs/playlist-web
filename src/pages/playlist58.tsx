@@ -21,7 +21,7 @@ export default function Home({ playlist }) {
           <PlaylistTitle />
           <TabDetail />
           <DetailsHeader />
-          <TabGrade />
+          <TabGrade contents={playlist.contents} />
         </div>
       </div>
       <div className="md:hidden">
@@ -29,7 +29,7 @@ export default function Home({ playlist }) {
       </div>
       <div className="md:hidden">
         <TabContainer>
-          <Tabs />
+          <Tabs contents={playlist.contents} />
         </TabContainer>
       </div>
       <ProgressBarButton contents={playlist.contents} />

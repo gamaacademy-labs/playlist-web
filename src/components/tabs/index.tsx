@@ -3,7 +3,11 @@ import TabDetail from '../atoms/tab-detail'
 import TabGrade from '../atoms/tab-grade'
 import Layout from '../templates/motion'
 
-const Tabs: React.FC = () => {
+interface Props {
+  contents: [id: number, isVideoFinalized: boolean]
+}
+
+const Tabs = ({ contents }: Props) => {
   const tabsTypes = {
     DESCRIPTION: {
       title: 'Detalhes',
@@ -66,7 +70,7 @@ const Tabs: React.FC = () => {
                 {tab.title === tabsTypes.DESCRIPTION.title ? (
                   <TabDetail key={key} />
                 ) : (
-                  <TabGrade key={key} />
+                  <TabGrade contents={contents} key={key} />
                 )}
               </div>
             </Layout>
