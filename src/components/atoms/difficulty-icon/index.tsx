@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function DifficultyIcon() {
   return (
@@ -12,7 +12,7 @@ function DifficultyIcon() {
       <path
         fill="#7D38DB"
         d="M2 9.816a1 1 0 011-1h1.158a1 1 0 011 1v4.316a1 1 0 01-1 1H3a1 1 0 01-1-1V9.816z"
-      ></path>
+      />
       <rect
         width="3.158"
         height="9.474"
@@ -20,7 +20,7 @@ function DifficultyIcon() {
         y="5.658"
         fill="#7D38DB"
         rx="1"
-      ></rect>
+      />
       <rect
         width="3.158"
         height="12.632"
@@ -28,9 +28,9 @@ function DifficultyIcon() {
         y="2.5"
         fill="#D7DBDA"
         rx="1"
-      ></rect>
+      />
     </svg>
-  );
+  )
 }
 
-export default DifficultyIcon;
+export default DifficultyIcon
