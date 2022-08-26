@@ -7,16 +7,16 @@ import Logo from '../../atoms/logo'
 import ZoomIcon from '../../atoms/zoom-icon'
 
 function Navbar() {
-	return (
-		<HeaderContainer>
-			<Logo />
-			<HeaderIconContainer>
-				<ZoomIcon/>
-				<GridIcon/>
-				<HamburgerIcon />
-			</HeaderIconContainer>
-		</HeaderContainer>
-	)
+  return (
+    <HeaderContainer>
+      <Logo />
+      <HeaderIconContainer>
+        <ZoomIcon />
+        <GridIcon />
+        <HamburgerIcon />
+      </HeaderIconContainer>
+    </HeaderContainer>
+  )
 }
 
 export default Navbar

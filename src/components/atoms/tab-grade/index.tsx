@@ -1,11 +1,11 @@
-/* eslint-disable react/require-default-props */
-import { useState } from 'react'
 import CheckIcon from '../check-icon'
 import ExternalLinkIcon from '../external-link-icon'
 import PlayIcon from '../play-icon'
 
 type TabProps = {
-  contents: [id: number, isVideoFinalized: boolean]
+  contents: {
+    isVideoFinalized: boolean
+  }
 }
 
 const TabGrade = ({ contents }: TabProps) => {
@@ -20,71 +20,72 @@ const TabGrade = ({ contents }: TabProps) => {
         <li className="border-b px-5 py-4 flex items-center justify-between">
           <div className="flex items-center gap-5">
             <PlayIcon color="#7D38DB" size="16px" />
-            <h2>1. Desgin centrado no usuário</h2>
+            <h2>1. Design centrado no usuário</h2>
           </div>
           <div className="ml-96 flex items-center ">
-            {contents[0].isVideoFinalized === true ? (
-            <div className='mr-4'>
-            <CheckIcon />
-            </div>
-              ) :
-              () : null}
-            <p>5:22</p>
+            {contents[0].isVideoFinalized &&
+              <div className='mr-4'>
+                <CheckIcon />
+              </div>
+            }
+            <p>
+              5:22
+            </p>
           </div>
         </li>
         <li className="border-b px-5 py-4 flex items-center justify-between">
           <div className="flex items-center gap-5">
             <PlayIcon color="#7D38DB" size="16px" />
-            <h2>1. Desgin centrado no usuário</h2>
-          </div>
-          <p>5:22</p>
-        </li>
-        <li className="border-b px-5 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-5">
-            <PlayIcon color="#7D38DB" size="16px" />
-            <h2>1. Desgin centrado no usuário</h2>
+            <h2>1. Design centrado no usuário</h2>
           </div>
           <p>5:22</p>
         </li>
         <li className="border-b px-5 py-4 flex items-center justify-between">
           <div className="flex items-center gap-5">
             <PlayIcon color="#7D38DB" size="16px" />
-            <h2>1. Desgin centrado no usuário</h2>
+            <h2>1. Design centrado no usuário</h2>
           </div>
           <p>5:22</p>
         </li>
         <li className="border-b px-5 py-4 flex items-center justify-between">
           <div className="flex items-center gap-5">
             <PlayIcon color="#7D38DB" size="16px" />
-            <h2>1. Desgin centrado no usuário</h2>
+            <h2>1. Design centrado no usuário</h2>
           </div>
           <p>5:22</p>
         </li>
         <li className="border-b px-5 py-4 flex items-center justify-between">
           <div className="flex items-center gap-5">
             <PlayIcon color="#7D38DB" size="16px" />
-            <h2>1. Desgin centrado no usuário</h2>
+            <h2>1. Design centrado no usuário</h2>
           </div>
           <p>5:22</p>
         </li>
         <li className="border-b px-5 py-4 flex items-center justify-between">
           <div className="flex items-center gap-5">
             <PlayIcon color="#7D38DB" size="16px" />
-            <h2>1. Desgin centrado no usuário</h2>
+            <h2>1. Design centrado no usuário</h2>
           </div>
           <p>5:22</p>
         </li>
         <li className="border-b px-5 py-4 flex items-center justify-between">
           <div className="flex items-center gap-5">
             <PlayIcon color="#7D38DB" size="16px" />
-            <h2>1. Desgin centrado no usuário</h2>
+            <h2>1. Design centrado no usuário</h2>
           </div>
           <p>5:22</p>
         </li>
         <li className="border-b px-5 py-4 flex items-center justify-between">
           <div className="flex items-center gap-5">
             <PlayIcon color="#7D38DB" size="16px" />
-            <h2>1. Desgin centrado no usuário</h2>
+            <h2>1. Design centrado no usuário</h2>
+          </div>
+          <p>5:22</p>
+        </li>
+        <li className="border-b px-5 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-5">
+            <PlayIcon color="#7D38DB" size="16px" />
+            <h2>1. Design centrado no usuário</h2>
           </div>
           <p>5:22</p>
         </li>
