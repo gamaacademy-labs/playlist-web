@@ -4,7 +4,9 @@ import TabGrade from '../atoms/tab-grade'
 import Layout from '../templates/motion'
 
 interface Props {
-  contents: [id: number, isVideoFinalized: boolean]
+  contents: Array<{
+    isVideoFinalized: boolean
+  }>
 }
 
 const Tabs = ({ contents }: Props) => {

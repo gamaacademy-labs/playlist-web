@@ -9,7 +9,7 @@ import Thumbnail from '../components/molecules/thumbnail'
 import Tabs from '../components/tabs'
 import Layout from '../components/templates/motion'
 
-export default function Home() {
+export default function Home({ playlist }) {
   return (
     <Layout>
       <PlaylistHeader />
@@ -19,7 +19,7 @@ export default function Home() {
           <PlaylistTitle />
           <TabDetail />
           <DetailsHeader />
-          <TabGrade />
+          <TabGrade contents={playlist.contents} />
         </div>
       </div>
       <div className="md:hidden">
@@ -27,10 +27,33 @@ export default function Home() {
       </div>
       <div className="md:hidden">
         <TabContainer>
-          <Tabs />
+          <Tabs contents={playlist.contents} />
         </TabContainer>
       </div>
       <PlaybuttonContainer />
     </Layout>
   )
+}
+
+export async function getServerSideProps() {
+  return {
+    props: {
+      playlist: {
+        contents: [
+          {
+            id: 1,
+            isVideoFinalized: true,
+          },
+          {
+            id: 2,
+            isVideoFinalized: false,
+          },
+          {
+            id: 3,
+            isVideoFinalized: false,
+          },
+        ],
+      },
+    },
+  }
 }
