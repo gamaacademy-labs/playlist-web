@@ -8,6 +8,7 @@ import PlaylistTitle from '../components/molecules/playlist-title'
 import Thumbnail from '../components/molecules/thumbnail'
 import Tabs from '../components/tabs'
 import Layout from '../components/templates/motion'
+import { apiSDK } from '../services/api-sdk'
 
 export default function Home({ playlist }) {
   return (
