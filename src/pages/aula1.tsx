@@ -1,7 +1,7 @@
 import React from 'react'
 import HederClassWithoutMaterial from '../components/molecules/header-class-without-material'
 
-function teste() {
+function Aula1() {
   return (
     <div>
       <HederClassWithoutMaterial/>
@@ -9,4 +9,4 @@ function teste() {
   )
 }
 
-export default teste
+export default Aula1
