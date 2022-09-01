@@ -29,9 +29,9 @@ const TabDetail: React.FC = () => {
         </div>
         <div className="flex items-center gap-2">
           <ShareModal>
-            <div>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', cursor: 'pointer' }}>
               <ShareIcon />
-              <div className="underline">
+              <div className="underline" style={{ marginLeft: '0.5rem' }}>
                 Compartilhar
               </div>
             </div>
