@@ -1,4 +1,4 @@
-import React from "react";
+import React, { cloneElement } from "react";
 import CloseGreenIcon from "../close-green-icon";
 import FaceBookIcon from "../FaceBookIcon";
 import InstagramIcon from "../instagram-icon";
@@ -7,20 +7,12 @@ import ShareMiddleIcon from "../share-middle-icon";
 import WhatsAppIcon from "../WhasappIcon";
 import XIcon from "../x-icon";
 
-
-
-export default function Modal() {
+export default function Modal({ children }) {
   const [showModal, setShowModal] = React.useState(false);
 
   return (
     <>
-      <button
-        className="bg-black-500 text-black active:bg-black-600 font-bold uppercase text-sm px-6 py-3 rounded shadow  outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-        type="button"
-        onClick={() => setShowModal(true)}
-      >
-        Open regular modal
-      </button>
+      {cloneElement(children, { onClick: () => setShowModal(true) })}
       {showModal ? (
         <>
           <div

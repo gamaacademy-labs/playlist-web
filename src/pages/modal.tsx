@@ -4,7 +4,11 @@ import ShareModal from '../components/atoms/share-modal'
 function modal() {
   return (
     <div>
-      <ShareModal/>
+      <ShareModal>
+        <p>
+          fal aai mano
+        </p>
+      </ShareModal>
     </div>
   )
 }

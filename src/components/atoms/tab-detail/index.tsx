@@ -1,5 +1,6 @@
 import DetailsHeader from '../details-header'
 import PinIcon from '../pin-icon'
+import ShareModal from '../../../components/atoms/share-modal'
 import ShareIcon from '../share-icon'
 
 const TabDetail: React.FC = () => {
@@ -27,10 +28,14 @@ const TabDetail: React.FC = () => {
           </a>
         </div>
         <div className="flex items-center gap-2">
-          <ShareIcon />
-          <a href="#" className="underline">
-            Compartilhar
-          </a>
+          <ShareModal>
+            <div>
+              <ShareIcon />
+              <div className="underline">
+                Compartilhar
+              </div>
+            </div>
+          </ShareModal>
         </div>
       </div>
     </>
