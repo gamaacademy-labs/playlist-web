@@ -3,6 +3,7 @@ import DifficultyIcon from '../difficulty-icon'
 import PinIcon from '../pin-icon'
 import ShareIcon from '../share-icon'
 import TimerIcon from '../timer-icon'
+import ShareModal from '../../../components/atoms/share-modal'
 
 const DetailsHeader: React.FC = () => {
   return (
@@ -35,10 +36,14 @@ const DetailsHeader: React.FC = () => {
           </a>
         </div>
         <div className="flex items-center gap-2">
-          <ShareIcon />
-          <a href="#" className="underline">
-            Compartilhar
-          </a>
+          <ShareModal>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', cursor: 'pointer' }}>
+              <ShareIcon />
+              <div className="underline" style={{ marginLeft: '0.5rem' }}>
+                Compartilhar
+              </div>
+            </div>
+          </ShareModal>
         </div>
       </div>
     </div>
