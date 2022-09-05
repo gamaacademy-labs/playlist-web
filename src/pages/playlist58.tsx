@@ -32,7 +32,7 @@ export default function Home({ playlist }) {
           <Tabs contents={playlist.contents} />
         </TabContainer>
       </div>
-      <ProgressBarButton contents={playlist.contents} />
+      <a href="/aula1"><ProgressBarButton contents={playlist.contents} /></a>
     </Layout>
   )
 }
