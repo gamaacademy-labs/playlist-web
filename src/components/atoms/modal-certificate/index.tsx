@@ -50,7 +50,7 @@ export default function ModalCertificate({ children }) {
                   </div>
                   <div className="flex flex-col mt-6 m-2">
                     <div>
-                    <CertificateDownloadIcon />
+                    <a href="http://www.unirio.br/cla/arquivos/Certificado.pdf/at_download/file"><CertificateDownloadIcon /></a>
                     </div>
                     <div className="mt-5" >
                    <ShareCertificateIcon/>
