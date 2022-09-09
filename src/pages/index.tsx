@@ -8,7 +8,6 @@ import PlaylistTitle from '../components/molecules/playlist-title'
 import Thumbnail from '../components/molecules/thumbnail'
 import Tabs from '../components/tabs'
 import Layout from '../components/templates/motion'
-import { apiSDK } from '../services/api-sdk'
 
 export default function Home({ playlist }) {
   return (
@@ -19,7 +18,7 @@ export default function Home({ playlist }) {
         <div className="hidden md:inline order-first md:max-h-16">
           <PlaylistTitle />
           <TabDetail />
-          <DetailsHeader />
+          <DetailsHeader playlistId={playlist.id} />
           <TabGrade contents={playlist.contents} />
         </div>
       </div>
@@ -40,6 +39,7 @@ export async function getServerSideProps() {
   return {
     props: {
       playlist: {
+        id: 'cl7usus7v0007y52m42wvdsvc',
         contents: [
           {
             id: 1,
