@@ -19,7 +19,7 @@ export default function Playlist75({ playlist }) {
         <div className="hidden md:inline order-first md:max-h-16">
           <PlaylistTitle />
           <TabDetail />
-          <DetailsHeader />
+          <DetailsHeader playlistId={"1"}/>
           <TabGrade contents={playlist.contents} />
         </div>
       </div>

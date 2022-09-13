@@ -36,7 +36,7 @@ function HederClassWithoutMaterial() {
         </div>
       </div>
 
-      <div className='bg-[#7d38db] border-solid border-2 border-gray-300 w-96   flex justify-around items-center p-4 '>
+      <div className='bg-[#7d38db] border-solid border-2 border-gray-300 w-96 flex justify-around items-center p-4 '>
         <div>
         <p className="text-white text-sm">Próxima aula: Design centrado no usuário</p>
           <p className="text-white font-bold mt-2">Aula 1/8</p>

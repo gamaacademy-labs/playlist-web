@@ -19,7 +19,7 @@ export default function Home({ playlist }) {
         <div className="hidden md:inline order-first md:max-h-16">
           <PlaylistTitle />
           <TabDetail />
-          <DetailsHeader />
+          <DetailsHeader playlistId={playlist.id} />
           <TabGrade contents={playlist.contents} />
         </div>
       </div>
@@ -37,24 +37,12 @@ export default function Home({ playlist }) {
 }
 
 export async function getServerSideProps() {
+  const data = await apiSDK.getOnePlaylist('test')
+  data.contents = data.contents.map((content) => content.content);
+
   return {
     props: {
-      playlist: {
-        contents: [
-          {
-            id: 1,
-            isVideoFinalized: true,
-          },
-          {
-            id: 2,
-            isVideoFinalized: false,
-          },
-          {
-            id: 3,
-            isVideoFinalized: false,
-          },
-        ],
-      },
+      playlist: data,
     },
   }
 }

@@ -4,8 +4,17 @@ import PinIcon from '../pin-icon'
 import ShareIcon from '../share-icon'
 import TimerIcon from '../timer-icon'
 import ShareModal from '../../../components/atoms/share-modal'
+import { apiSDK } from '../../../services/api-sdk'
 
-const DetailsHeader: React.FC = () => {
+function DetailsHeader({ playlistId }) {
+  function createPlaylistFavorite() {
+    try {
+      apiSDK.createStudentPlaylistFavorite(playlistId, "student_id");
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
   return (
     <div className="py-4 my-6 border-y flex mx-2 md:mx-6 md:border-y md:border-gray-400 md:items-center md:justify-between">
       <div className="flex gap-8 md:gap-10">
@@ -31,9 +40,9 @@ const DetailsHeader: React.FC = () => {
       <div className="hidden md:flex gap-8 mt-6 px-2 text-sm">
         <div className="flex items-center gap-2">
           <PinIcon />
-          <a href="#" className="underline">
+          <button onClick={createPlaylistFavorite}>
             Salvar
-          </a>
+          </button>
         </div>
         <div className="flex items-center gap-2">
           <ShareModal>
