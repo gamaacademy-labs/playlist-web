@@ -8,6 +8,7 @@ import PlaylistTitle from '../components/molecules/playlist-title'
 import Thumbnail from '../components/molecules/thumbnail'
 import Tabs from '../components/tabs'
 import Layout from '../components/templates/motion'
+import { apiSDK } from '../services/api-sdk'
 
 export default function Home({ playlist }) {
   return (
@@ -36,25 +37,12 @@ export default function Home({ playlist }) {
 }
 
 export async function getServerSideProps() {
+  const data = await apiSDK.getOnePlaylist('test')
+  data.contents = data.contents.map((content) => content.content);
+
   return {
     props: {
-      playlist: {
-        id: 'cl7usus7v0007y52m42wvdsvc',
-        contents: [
-          {
-            id: 1,
-            isVideoFinalized: true,
-          },
-          {
-            id: 2,
-            isVideoFinalized: false,
-          },
-          {
-            id: 3,
-            isVideoFinalized: false,
-          },
-        ],
-      },
+      playlist: data,
     },
   }
 }
