@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Video() {
+function Video({ url }) {
   return (
     <div>
-      <iframe width="375" height="211" src="https://www.youtube.com/embed/_ul7X5js1vE" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+      <iframe width="560" height="315" src={url} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
     </div>
   )

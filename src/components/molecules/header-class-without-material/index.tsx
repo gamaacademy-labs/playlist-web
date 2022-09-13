@@ -1,29 +1,31 @@
-import { Typography } from '@mui/material'
 import React from 'react'
+import { ContentType } from '../../../interfaces'
 import ContainerPersonIcon from '../../atoms/container-person-icon'
-import DetailsHeader from '../../atoms/details-header'
 import HamburgerIcon from '../../atoms/hamburger-icon'
 import HeaderContainer from '../../atoms/header-container'
 import MaterialComplementary from '../../atoms/material-complementary'
 import NothingHereIcon from '../../atoms/nothing-here-icon'
 import ReturnIcon from '../../atoms/return-icon'
-import TabDetail from '../../atoms/tab-detail'
 import UpDownIcon from '../../atoms/up-down-icon'
 import Video from '../../atoms/video'
 import PlaylistTitle from '../playlist-title'
 
-function HederClassWithoutMaterial() {
+type HederClassWithoutMaterialrops = {
+  content: ContentType;
+}
+
+function HederClassWithoutMaterial({ content }: HederClassWithoutMaterialrops) {
   return (
     <div>
       <HeaderContainer>
         <div className='flex items-center gap-3'>
           <ReturnIcon />
-          <p>Nome da Playlist</p>
+          <p>{content.title}</p>
         </div>
         <HamburgerIcon />
       </HeaderContainer>
-      <Video />
-      <PlaylistTitle />
+      <Video url={content.linkVideo} />
+      <PlaylistTitle title={content.title}/>
       <ContainerPersonIcon />
       <MaterialComplementary />
       <NothingHereIcon />

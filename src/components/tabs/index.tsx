@@ -1,12 +1,11 @@
 import { useState } from 'react'
+import { ContentType } from '../../interfaces'
 import TabDetail from '../atoms/tab-detail'
 import TabGrade from '../atoms/tab-grade'
 import Layout from '../templates/motion'
 
 interface Props {
-  contents: Array<{
-    isVideoFinalized: boolean
-  }>
+  contents: ContentType[]
 }
 
 const Tabs = ({ contents }: Props) => {

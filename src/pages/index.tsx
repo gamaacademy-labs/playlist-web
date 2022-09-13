@@ -8,23 +8,28 @@ import PlaylistTitle from '../components/molecules/playlist-title'
 import Thumbnail from '../components/molecules/thumbnail'
 import Tabs from '../components/tabs'
 import Layout from '../components/templates/motion'
+import { PlaylistType } from '../interfaces'
 import { apiSDK } from '../services/api-sdk'
 
-export default function Home({ playlist }) {
+type HomeProps = {
+  playlist: PlaylistType
+}
+
+export default function Home({ playlist }: HomeProps) {
   return (
     <Layout>
       <PlaylistHeader />
       <div className="md:flex md:justify-between">
         <Thumbnail />
         <div className="hidden md:inline order-first md:max-h-16">
-          <PlaylistTitle />
+          <PlaylistTitle title={playlist.id}/>
           <TabDetail />
-          <DetailsHeader playlistId={playlist.id} />
+          <DetailsHeader playlistId={playlist.title} />
           <TabGrade contents={playlist.contents} />
         </div>
       </div>
       <div className="md:hidden">
-        <PlaylistTitle />
+        <PlaylistTitle title={playlist.title}/>
       </div>
       <div className="md:hidden">
         <TabContainer>
