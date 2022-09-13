@@ -2,9 +2,9 @@ import CheckIcon from "../../atoms/check-icon";
 import { Link } from "../../atoms/link";
 import PlayIcon from "../../atoms/play-icon";
 
-export function ContentCard({ isVideoFinalized }) {
+export function ContentCard({ isVideoFinalized, playlistTitle, contentId }) {
   return (
-    <Link url="/aula1">
+    <Link url={playlistTitle + "?contentId=" + contentId }>
       <li className="border-b px-5 py-4 flex items-center justify-between">
         <div className="flex items-center gap-5">
           <PlayIcon color="#7D38DB" size="16px" />

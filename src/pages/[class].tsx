@@ -19,8 +19,6 @@ function Class({ content }: ClassProps) {
           console.log(error)
         }
       })()
-
-
   }, [content.id])
 
   return (

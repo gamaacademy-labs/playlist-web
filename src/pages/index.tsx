@@ -25,7 +25,7 @@ export default function Home({ playlist }: HomeProps) {
           <PlaylistTitle title={playlist.id}/>
           <TabDetail />
           <DetailsHeader playlistId={playlist.title} />
-          <TabGrade contents={playlist.contents} />
+          <TabGrade playlistTitle={playlist.title} contents={playlist.contents} />
         </div>
       </div>
       <div className="md:hidden">
