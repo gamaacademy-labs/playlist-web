@@ -6,9 +6,12 @@ import Layout from '../templates/motion'
 
 interface Props {
   contents: ContentType[]
+  description: string
+  playlistId: string
+  playlistTitle: string
 }
 
-const Tabs = ({ contents }: Props) => {
+const Tabs = ({ contents, description, playlistId, playlistTitle }: Props) => {
   const tabsTypes = {
     DESCRIPTION: {
       title: 'Detalhes',
@@ -69,9 +72,9 @@ const Tabs = ({ contents }: Props) => {
             <Layout>
               <div key={key} className="p-4">
                 {tab.title === tabsTypes.DESCRIPTION.title ? (
-                  <TabDetail key={key} />
+                  <TabDetail key={key} description={description} playlistId={playlistId} />
                 ) : (
-                  <TabGrade contents={contents} key={key} />
+                  <TabGrade contents={contents} key={key} playlistTitle={playlistTitle} />
                 )}
               </div>
             </Layout>

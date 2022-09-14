@@ -4,22 +4,10 @@ import PlayLargeIcon from '../playbutton-icon-lg'
 import PlayIcon from '../play-icon'
 
 type ProgressBarButtonProps = {
-  contents: Array<any>
+  progress: number
 }
 
-const ProgressBarButton = ({ contents }: ProgressBarButtonProps) => {
-  const progress = useMemo(() => {
-    const visualizedStatus = contents.filter(
-      content => content.isVideoFinalized === true,
-    ).length
-
-    const total = contents.length
-
-    const progressPercentage = Math.round((visualizedStatus / total) * 100)
-
-    return progressPercentage
-  }, [contents])
-
+const ProgressBarButton = ({ progress }: ProgressBarButtonProps) => {
   return (
     <div className="bg-[#7D38DB] h-28  w-full   md:justify-end fixed bottom-0 p-4">
       <div className="w-80 flex flex-col gap-6">

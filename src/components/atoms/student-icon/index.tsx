@@ -1,12 +1,10 @@
-import React from 'react'
-
-
+import Image from 'next/image'
 
 function StudentIcon() {
   return (
     <div>
 
-      <img src="/assets/student.png" alt="Imagem de estudante" />
+      <Image src="/assets/student.png" alt="Imagem de estudante" width="40px" height="40px"/>
 
     </div>
   )
