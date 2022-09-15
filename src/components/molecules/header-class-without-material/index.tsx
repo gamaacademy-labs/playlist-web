@@ -24,7 +24,9 @@ function HederClassWithoutMaterial({ content }: HederClassWithoutMaterialrops) {
         </div>
         <HamburgerIcon />
       </HeaderContainer>
+      <div className='mt-7 ml-7'>
       <Video url={content.linkVideo} />
+      </div>
       <PlaylistTitle title={content.title}/>
       <ContainerPersonIcon />
       <MaterialComplementary />
